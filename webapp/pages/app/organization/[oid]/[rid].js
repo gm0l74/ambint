@@ -14,12 +14,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { server } from '../../../../../config';
-import App from '../../../../../layouts/App';
+import { server } from '../../../../config';
+import App from '../../../../layouts/App';
 
-import Button from '../../../../../components/Button';
-import FloorList from '../../../../../components/FloorList';
-import InputField from '../../../../../components/InputField';
+import Button from '../../../../components/Button';
+import FloorList from '../../../../components/FloorList';
+import InputField from '../../../../components/InputField';
 
 //---------------------------------
 // component Room

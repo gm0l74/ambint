@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         09 05 2021
+// @ last update         11 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -19,7 +19,7 @@ import { useAuth } from '../../lib/auth';
 //---------------------------------
 // Page LoginTemplate
 //---------------------------------
-const LoginTemplate = () => {
+const LoginTemplate = ({ change }) => {
   const { signInWithEmailAndPassword } = useAuth();
 
   const [form, setForm] = useState({ email: '', password: '' });
@@ -49,12 +49,12 @@ const LoginTemplate = () => {
   		<div className="auth__container">
   			<ul className="auth__switcher auth-switcher auth-trigger">
   				<li>
-            <a href="/auth/login" className="auth-switcher-selected">
+            <a href="#" className="auth-switcher-selected">
               LOGIN
             </a>
           </li>
   				<li>
-            <a href="/auth/register">
+            <a href="#" onClick={change}>
               REGISTER
             </a>
           </li>

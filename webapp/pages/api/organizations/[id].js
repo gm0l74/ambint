@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         07 05 2021
+// @ last update         11 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -15,13 +15,20 @@
 // List all rooms registered by an Organization
 
 //---------------------------------
+// Imports
+//---------------------------------
+import { fetchData } from '../../../lib/db';
+
+//---------------------------------
 // Handler
 //---------------------------------
-export default function handler({ query }, res) {
-  res.status(200).json({
-    id: '1',
-    name: 'Instituto Superior Técnico'
-  });
+export default async function handler({ query }, res) {
+  const data = await fetchData(query.id);
+  if (data) {
+    return res.status(200).json(data);
+  }
 
-  // res.status(404).json({ message: `org with id ${id} is not found})
+  return res.status(404).json({
+    message: 'Organization not found'
+  });
 }

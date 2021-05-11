@@ -12,9 +12,9 @@ import Link from "next/link";
 //---------------------------------
 // component RoomItem
 //---------------------------------
-const RoomItem = ({ room }) => {
+const RoomItem = ({ room, organization }) => {
   return (
-    <Link href={`/organization/${room.id}`}>
+    <Link href={`/organization/${organization}/${room.id}`}>
       <a>
         <h3>
           {room.name}

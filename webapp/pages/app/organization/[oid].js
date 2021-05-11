@@ -5,43 +5,41 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         07 05 2021
+// @ last update         11 05 2021
+//---------------------------------
+
+//---------------------------------
+// Imports
 //---------------------------------
 import React from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-
-import QRCode from "react-qr-code";
-
-import { server } from '../../../config';
-import App from '../../../layouts/App';
-
-import Button from '../../../components/Button';
-import RoomList from '../../../components/RoomList';
-import InputField from '../../../components/InputField';
-
-import { useAuth } from '../../../lib/auth';
-import { auth } from '../../../lib/firebase-admin';
-
 import nookies from "nookies";
+
+import { useAuth } from "../../../lib/auth";
+import { auth } from "../../../lib/firebase-admin";
+
+import { server } from "../../../config";
+import App from "../../../layouts/App";
+
+import Button from "../../../components/Button";
+import RoomList from "../../../components/RoomList";
+import InputField from "../../../components/InputField";
 
 //---------------------------------
 // component Organization
 //---------------------------------
-const organization = ({ organization }) => {
+const Organization = ({ organization }) => {
   const { signOut } = useAuth();
 
   return (
     <>
       <div className="container mx-auto grid grid-cols-1 gap-8">
         <InputField />
-        <RoomList
-          rooms={[
-            {id: 1},
-            {id: 2},
-            {id: 3}
-          ]}
-        />
+        {
+          Array.isArray(organization.rooms) &&
+          <RoomList
+            rooms={organization.rooms}
+          />
+        }
         <div class="flex items-center justify-center">
           <Button />
           <Button />
@@ -56,31 +54,28 @@ const organization = ({ organization }) => {
   )
 };
 
-organization.layout = App;
+Organization.layout = App;
 
 //---------------------------------
 // GetServerSideProps
 //---------------------------------
 export const getServerSideProps = async (ctx) => {
   try {
+    // Verify authentication
     const cookies = nookies.get(ctx);
     const token = await auth.verifyIdToken(cookies.token);
 
-    // the user is authenticated!
+    // Confirmation that the user is authenticated!
     const { uid, email } = token;
 
-    // the user is authenticated!
-    // FETCH STUFF HERE
-
-    const res = await fetch(`${server}/api/organizations/${ctx.params.id}`);
-
-    const organization = await res.json();
+    // Fetch organization data
+    const data = await fetch(`${server}/api/organizations/${uid}`);
+    const organization = await data.json();
 
     return {
       props: {
-        message: `Your email is ${email} and your UID is ${uid}.`,
         organization: organization
-      },
+      }
     };
   } catch (err) {
     // Redirect to the authentication page
@@ -94,37 +89,7 @@ export const getServerSideProps = async (ctx) => {
   }
 };
 
-// //---------------------------------
-// // GetStaticProps
-// //---------------------------------
-// export const getStaticProps = async (context) => {
-//   const res = await fetch(`${server}/api/organizations/${context.params.id}`);
-//
-//   const organization = await res.json();
-//
-//   return {
-//     props: { organization }
-//   };
-// };
-//
-// //---------------------------------
-// // GetStaticPaths
-// //---------------------------------
-// export const getStaticPaths = async () => {
-//   const res = await fetch(`${server}/api/organizations`);
-//
-//   const organizations = await res.json();
-//
-//   const oids = organizations.map((organization) => organization.id);
-//   const paths = oids.map((oid) => ({ params: { oid: oid.toString() } }))
-//
-//   return {
-//     paths,
-//     fallback: false
-//   };
-// }
-
 //---------------------------------
 // Exports
 //---------------------------------
-export default organization;
+export default Organization;

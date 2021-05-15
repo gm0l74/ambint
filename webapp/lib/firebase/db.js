@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         11 05 2021
+// @ last update         15 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -24,45 +24,45 @@ export function updateUser(uid, data) {
 
 export function createUser(uid, data) {
   return firestore
-    .collection('users')
-    .doc(uid)
-    .set({ uid, ...data }, { merge: true });
+  .collection('users')
+  .doc(uid)
+  .set({ uid, ...data }, { merge: true });
 }
 
 export function fetchCollection(collection = 'users') {
   return firestore.collection(collection)
-    .get()
-    .then((data) => {
-      let result = [];
-      data.forEach((user) => {
-        result.push(user.data());
-      });
-
-      return result;
-    })
-    .catch((error) => {
-      return error;
+  .get()
+  .then((data) => {
+    let result = [];
+    data.forEach((user) => {
+      result.push(user.data());
     });
+
+    return result;
+  })
+  .catch((error) => {
+    return error;
+  });
 }
 
 export function fetchData(uid, collection = 'users') {
   return firestore.collection(collection).doc(uid)
-    .get()
-    .then((doc) => {
-      return (doc.exists) ? doc.data() : null;
-    })
-    .catch((error) => {
-      return null;
-    });
+  .get()
+  .then((doc) => {
+    return (doc.exists) ? doc.data() : null;
+  })
+  .catch((error) => {
+    return null;
+  });
 }
 
 export function update(uid, data, collection = 'users') {
   return firestore.collection(collection).doc(uid)
-    .set(data)
-    .then((data) => {
-      return data;
-    })
-    .catch((error) => {
-      return error;
-    });
+  .set(data)
+  .then((data) => {
+    return data;
+  })
+  .catch((error) => {
+    return error;
+  });
 }

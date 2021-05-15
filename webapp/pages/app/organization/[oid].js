@@ -14,8 +14,8 @@
 import React from "react";
 import nookies from "nookies";
 
-import { useAuth } from "../../../lib/auth";
-import { auth } from "../../../lib/firebase-admin";
+import { useAuth } from "lib/firebase/auth";
+import { auth } from "lib/firebase/firebase-admin";
 
 import { server } from "../../../config";
 import App from "../../../layouts/App";

@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         09 05 2021
+// @ last update         15 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -16,7 +16,7 @@ import ReactDOM from 'react-dom';
 
 import Head from 'next/head';
 
-import { AuthProvider } from '../lib/auth';
+import { AuthProvider } from 'lib/firebase/auth';
 
 // Styling
 // import '@fortawesome/fontawesome-free/css/all.min.css';

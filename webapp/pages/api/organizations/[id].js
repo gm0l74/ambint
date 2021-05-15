@@ -17,7 +17,7 @@
 //---------------------------------
 // Imports
 //---------------------------------
-import { fetchData } from '../../../lib/db';
+import { fetchData } from 'lib/firebase/db';
 
 //---------------------------------
 // Handler

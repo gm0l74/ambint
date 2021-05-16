@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         09 05 2021
+// @ last update         16 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -14,12 +14,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { server } from '../../../../config';
-import App from '../../../../layouts/App';
+import { server } from 'config/index';
+import App from 'layouts/App';
 
-import Button from '../../../../components/Button';
-import FloorList from '../../../../components/FloorList';
-import InputField from '../../../../components/InputField';
+import Button from 'components/Button';
+import FloorList from 'components/FloorList';
+import InputField from 'components/InputField';
 
 //---------------------------------
 // component Room
@@ -27,7 +27,7 @@ import InputField from '../../../../components/InputField';
 const room = ({ room }) => {
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 gap-8">
+      <div className='container mx-auto grid grid-cols-1 gap-8'>
         <h1>Organization: {'TODO'}</h1>
         <InputField />
         <FloorList
@@ -37,7 +37,7 @@ const room = ({ room }) => {
             {id: 3}
           ]}
         />
-        <div class="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Button />
           <Button />
         </div>
@@ -49,41 +49,38 @@ const room = ({ room }) => {
 room.layout = App;
 
 //---------------------------------
-// GetStaticProps
+// GetServerSideProps
 //---------------------------------
-export const getStaticProps = async (context) => {
-  const res = await fetch(`${server}/api/organizations/${context.params.id}`)
+export const getServerSideProps = async (ctx) => {
+  try {
+    // Verify authentication
+    const cookies = nookies.get(ctx);
+    const token = await auth.verifyIdToken(cookies.token);
 
-  const room = await res.json()
+    // Confirmation that the user is authenticated!
+    const { uid, email } = token;
 
-  return {
-    props: {
-      room
-    }
-  };
-}
+    // Fetch organization data
+    const data = await fetch(`${server}/api/organizations/${uid}`);
 
-//---------------------------------
-// GetStaticPaths
-//---------------------------------
-export const getStaticPaths = async () => {
-  const res = await fetch(`${server}/api/organizations`)
+    const organization = await data.json()
 
-  const rooms = await res.json()
-
-  const rids = rooms.map((room) => room.id)
-  const paths = rids.map((rid) => ({
-    params: {
-      oid: rid.toString(),
-      rid: rid.toString()
-    }
-  }))
-
-  return {
-    paths,
-    fallback: false
-  };
-}
+    return {
+      props: {
+        organization: organization
+      }
+    };
+  } catch (err) {
+    // Redirect to the authentication page
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/'
+      },
+      props: {}
+    };
+  }
+};
 
 //---------------------------------
 // Exports

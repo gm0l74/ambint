@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         15 05 2021
+// @ last update         16 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -30,9 +30,9 @@ import { createUser } from './db';
 // Formats
 //---------------------------------
 const UserDataFormat = (user) => ({
-  uid: user.uid | null,
-  email: user.email | null,
-  name: user.displayName | null
+  uid: user.uid,
+  email: user.email,
+  displayName: user.displayName
 });
 
 //---------------------------------
@@ -99,10 +99,12 @@ export function AuthProvider({ children }) {
 
         // Database update
         const details = UserDataFormat(response.user);
+
         // Account for delayed update
         details.displayName = username;
+        details.displayName = response.user.uid;
 
-        createUser(details.uid, details);
+        createUser(details.uid, { ...details, rooms: [] });
       });
     }
   );

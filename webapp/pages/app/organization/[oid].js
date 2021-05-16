@@ -5,24 +5,24 @@
 // @ version             1.0
 //
 // @ start date          06 05 2021
-// @ last update         11 05 2021
+// @ last update         15 05 2021
 //---------------------------------
 
 //---------------------------------
 // Imports
 //---------------------------------
-import React from "react";
-import nookies from "nookies";
+import React from 'react';
+import nookies from 'nookies';
 
-import { useAuth } from "lib/firebase/auth";
-import { auth } from "lib/firebase/firebase-admin";
+import { useAuth } from 'lib/firebase/auth';
+import { auth } from 'lib/firebase/firebase-admin';
 
-import { server } from "../../../config";
-import App from "../../../layouts/App";
+import { server } from 'config/index';
+import App from 'layouts/App';
 
-import Button from "../../../components/Button";
-import RoomList from "../../../components/RoomList";
-import InputField from "../../../components/InputField";
+import Button from 'components/Button';
+import RoomList from 'components/RoomList';
+import InputField from 'components/InputField';
 
 //---------------------------------
 // component Organization
@@ -32,7 +32,7 @@ const Organization = ({ organization }) => {
 
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 gap-8">
+      <div className='container mx-auto grid grid-cols-1 gap-8'>
         <InputField />
         {
           Array.isArray(organization.rooms) &&
@@ -40,7 +40,7 @@ const Organization = ({ organization }) => {
             rooms={organization.rooms}
           />
         }
-        <div class="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Button />
           <Button />
           <button
@@ -82,7 +82,7 @@ export const getServerSideProps = async (ctx) => {
     return {
       redirect: {
         permanent: false,
-        destination: "/"
+        destination: '/'
       },
       props: {}
     };

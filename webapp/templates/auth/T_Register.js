@@ -6,7 +6,7 @@
 // @ version             1.0
 //
 // @ start date          15 05 2021
-// @ last update         15 05 2021
+// @ last update         16 05 2021
 //---------------------------------
 
 //---------------------------------
@@ -25,8 +25,7 @@ const T_Register = ({ changeTab }) => {
   const [form, setForm] = useState({
     email: '',
     username: '',
-    password: '',
-    confirmation: ''
+    password: ''
   });
 
   // Authentication interface
@@ -47,7 +46,6 @@ const T_Register = ({ changeTab }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // TODO
     signUpWithEmailAndPassword(form.email, form.username, form.password);
   };
 
@@ -130,24 +128,6 @@ const T_Register = ({ changeTab }) => {
                 autoComplete='off'
                 required
                 value={form.password}
-                onChange={handleChange()}
-              />
-            </p>
-            <p className='auth-fieldset'>
-              <label
-                className='auth-label auth-label--password auth-label-img'
-              >
-                Password
-              </label>
-              <input
-                className='auth-input auth-input-fw auth-input-hp auth-input-hb'
-                id='signup-conf-password'
-                type='password'
-                name='confirmation'
-                placeholder='CONFIRM PASSWORD'
-                autoComplete='off'
-                required
-                value={form.confirmation}
                 onChange={handleChange()}
               />
             </p>

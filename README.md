@@ -13,31 +13,34 @@ All API related routes start with /api.
 
 Here are some examples.
 
-1) To get all registered organizations do:
+1) To get everything (organizations, buildings, rooms, floors) do:
 https://ambint.herokuapp.com/api
 
-2) To get information of an organization:
-https://ambint.herokuapp.com/api/<org_uid>
+2) To get all buildings or rooms or floors or seats or tables, do:
+https://ambint.herokuapp.com/api?type=buildings
+https://ambint.herokuapp.com/api?type=rooms
+https://ambint.herokuapp.com/api?type=floors
+https://ambint.herokuapp.com/api?type=seats
+https://ambint.herokuapp.com/api?type=tables
 
-Several properties will be returned. One of those properties is 'buildings'.
-You can take one of those building uids and fetch data of that building using 3)
+If no type is specified, the default value is 'any'.
 
-3) To get data on a building of an organization:
-https://ambint.herokuapp.com/api/<org_uid>/b/<building_uid>
+3) You can also define other properties such as occupancy and n_seats (which work with buildings, rooms, floors, tables).
+To do so:
+https://ambint.herokuapp.com/api?occupancy=0.5
+https://ambint.herokuapp.com/api?type=rooms&n_seats=2
 
-Once again, several properties will be shown. One of them is 'rooms'.
-It contains the uids of each room registered in that building.
-To gather information of that room do 4)
+The last url shows how to combine parameters.
 
-4) To get data on a room of an organization's building:
-https://ambint.herokuapp.com/api/<org_uid>/r/<room_uid>
+5) To change the state of a seat, you must have its uid.
 
-One of the returned data is 'floors'.
-It contains the uids of each floor associated to the room.
-To gather information of that floor do 5)
+https://ambint.herokuapp.com/api/post?uid=<seat_uid>
 
-5) To get data on a floor of a room:
-https://ambint.herokuapp.com/api/<org_uid>/r/<room_uid>/<floor_uid>
+To get a list of all occupied seats, do:
+https://ambint.herokuapp.com/api?type=seats&state=true
+
+To get a list of all unoccupied seats, do:
+https://ambint.herokuapp.com/api?type=seats&state=true
 
 ## Locally
 

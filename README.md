@@ -14,33 +14,33 @@ All API related routes start with /api.
 Here are some examples.
 
 1) To get everything (organizations, buildings, rooms, floors) do:
-https://ambint.herokuapp.com/api
+https://ambint.herokuapp.com/api<br />
 
 2) To get all buildings or rooms or floors or seats or tables, do:
-https://ambint.herokuapp.com/api?type=buildings
-https://ambint.herokuapp.com/api?type=rooms
-https://ambint.herokuapp.com/api?type=floors
-https://ambint.herokuapp.com/api?type=seats
-https://ambint.herokuapp.com/api?type=tables
+https://ambint.herokuapp.com/api?type=buildings<br />
+https://ambint.herokuapp.com/api?type=rooms<br />
+https://ambint.herokuapp.com/api?type=floors<br />
+https://ambint.herokuapp.com/api?type=seats<br />
+https://ambint.herokuapp.com/api?type=tables<br />
 
 If no type is specified, the default value is 'any'.
 
 3) You can also define other properties such as occupancy and n_seats (which work with buildings, rooms, floors, tables).
 To do so:
-https://ambint.herokuapp.com/api?occupancy=0.5
-https://ambint.herokuapp.com/api?type=rooms&n_seats=2
+https://ambint.herokuapp.com/api?occupancy=0.5<br />
+https://ambint.herokuapp.com/api?type=rooms&n_seats=2<br />
 
 The last url shows how to combine parameters.
 
 5) To change the state of a seat, you must have its uid.
 
-https://ambint.herokuapp.com/api/post?uid=<seat_uid>
+https://ambint.herokuapp.com/api/post?uid=<seat_uid><br />
 
 To get a list of all occupied seats, do:
-https://ambint.herokuapp.com/api?type=seats&state=true
+https://ambint.herokuapp.com/api?type=seats&state=true<br />
 
 To get a list of all unoccupied seats, do:
-https://ambint.herokuapp.com/api?type=seats&state=true
+https://ambint.herokuapp.com/api?type=seats&state=true<br />
 
 ## Locally
 

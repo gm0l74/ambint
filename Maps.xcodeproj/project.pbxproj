@@ -48,7 +48,7 @@
 		3EBFDE625F5EB44CE6523C97 /* Pods-Maps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maps.debug.xcconfig"; path = "Target Support Files/Pods-Maps/Pods-Maps.debug.xcconfig"; sourceTree = "<group>"; };
 		543844BC23D2BE2000D5EDE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		549A5F58244673FE0025F312 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		54B51126216C3D840033A6F3 /* Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B51126216C3D840033A6F3 /* Mesa Livre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mesa Livre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B51129216C3D840033A6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B5112B216C3D840033A6F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54B5112E216C3D840033A6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +58,8 @@
 		54E26CB524A989090066C720 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		54E26CB724A98E310066C720 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BBD70BFA05FBEF548033F669 /* Pods_Maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4084B56266161110068E5B0 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
+		F4084B57266161110068E5B0 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F43082642651462F00ECDE67 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		F4308275265155C500ECDE67 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F430827F2651688900ECDE67 /* Building+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Building+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		54B51127216C3D840033A6F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54B51126216C3D840033A6F3 /* Maps.app */,
+				54B51126216C3D840033A6F3 /* Mesa Livre.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54B51125216C3D840033A6F3 /* Maps */ = {
+		54B51125216C3D840033A6F3 /* Mesa Livre */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54B51138216C3D860033A6F3 /* Build configuration list for PBXNativeTarget "Maps" */;
+			buildConfigurationList = 54B51138216C3D860033A6F3 /* Build configuration list for PBXNativeTarget "Mesa Livre" */;
 			buildPhases = (
 				FDAC8F7BC92E2ED65D8F9D39 /* [CP] Check Pods Manifest.lock */,
 				54B51122216C3D840033A6F3 /* Sources */,
@@ -165,9 +167,9 @@
 			);
 			dependencies = (
 			);
-			name = Maps;
+			name = "Mesa Livre";
 			productName = Maps;
-			productReference = 54B51126216C3D840033A6F3 /* Maps.app */;
+			productReference = 54B51126216C3D840033A6F3 /* Mesa Livre.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,13 +194,14 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-PT",
 			);
 			mainGroup = 54B5111D216C3D840033A6F3;
 			productRefGroup = 54B51127216C3D840033A6F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54B51125216C3D840033A6F3 /* Maps */,
+				54B51125216C3D840033A6F3 /* Mesa Livre */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +292,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54B5112E216C3D840033A6F3 /* Base */,
+				F4084B56266161110068E5B0 /* pt-PT */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -297,6 +301,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54B51133216C3D860033A6F3 /* Base */,
+				F4084B57266161110068E5B0 /* pt-PT */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -370,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -474,7 +481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54B51138216C3D860033A6F3 /* Build configuration list for PBXNativeTarget "Maps" */ = {
+		54B51138216C3D860033A6F3 /* Build configuration list for PBXNativeTarget "Mesa Livre" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54B51139216C3D860033A6F3 /* Debug */,

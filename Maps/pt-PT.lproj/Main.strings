@@ -1,0 +1,171 @@
+
+/* Class = "UILabel"; text = "Qualquer"; ObjectID = "0Kd-eF-cDg"; */
+"0Kd-eF-cDg.text" = "Qualquer";
+
+/* Class = "UILabel"; text = "Propriedades da Sala"; ObjectID = "21a-n4-abO"; */
+"21a-n4-abO.text" = "Propriedades da Sala";
+
+/* Class = "UILabel"; text = "Permitido trabalhar em grupo"; ObjectID = "2a5-5O-Rne"; */
+"2a5-5O-Rne.text" = "Permitido trabalhar em grupo";
+
+/* Class = "UILabel"; text = "Localização"; ObjectID = "4ZF-h8-B2f"; */
+"4ZF-h8-B2f.text" = "Localização";
+
+/* Class = "UILabel"; text = "Disponibiliza serviço de impressão"; ObjectID = "57E-Th-B5f"; */
+"57E-Th-B5f.text" = "Disponibiliza serviço de impressão";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "BK9-rf-BKP"; */
+"BK9-rf-BKP.text" = "0";
+
+/* Class = "UILabel"; text = "100%"; ObjectID = "E2K-5E-h64"; */
+"E2K-5E-h64.text" = "100%";
+
+/* Class = "UILabel"; text = "Sala Sem Nome"; ObjectID = "GxW-1U-Lu8"; */
+"GxW-1U-Lu8.text" = "Sala Sem Nome";
+
+/* Class = "UIButton"; normalTitle = "Reportar"; ObjectID = "IPT-t1-wjT"; */
+"IPT-t1-wjT.normalTitle" = "Reportar";
+
+/* Class = "UILabel"; text = "Trabalho em grupo permitido"; ObjectID = "JTd-rw-1jh"; */
+"JTd-rw-1jh.text" = "Trabalho em grupo permitido";
+
+/* Class = "UILabel"; text = "Serviço de impressão"; ObjectID = "KD3-Xd-J4Z"; */
+"KD3-Xd-J4Z.text" = "Serviço de impressão";
+
+/* Class = "UILabel"; text = "Permitido comer e beber"; ObjectID = "MAs-MQ-eWR"; */
+"MAs-MQ-eWR.text" = "Permitido comer e beber";
+
+/* Class = "UISegmentedControl"; Nxn-Mw-c2g.segmentTitles[0] = "D"; ObjectID = "Nxn-Mw-c2g"; */
+"Nxn-Mw-c2g.segmentTitles[0]" = "D";
+
+/* Class = "UISegmentedControl"; Nxn-Mw-c2g.segmentTitles[1] = "S"; ObjectID = "Nxn-Mw-c2g"; */
+"Nxn-Mw-c2g.segmentTitles[1]" = "S";
+
+/* Class = "UISegmentedControl"; Nxn-Mw-c2g.segmentTitles[2] = "M"; ObjectID = "Nxn-Mw-c2g"; */
+"Nxn-Mw-c2g.segmentTitles[2]" = "M";
+
+/* Class = "UISegmentedControl"; Nxn-Mw-c2g.segmentTitles[3] = "A"; ObjectID = "Nxn-Mw-c2g"; */
+"Nxn-Mw-c2g.segmentTitles[3]" = "A";
+
+/* Class = "UILabel"; text = "Acesso a computadores Mac"; ObjectID = "ODI-DM-gOO"; */
+"ODI-DM-gOO.text" = "Acesso a computadores Mac";
+
+/* Class = "UILabel"; text = "Biblioteca x"; ObjectID = "S0g-fl-jjA"; */
+"S0g-fl-jjA.text" = "Biblioteca x";
+
+/* Class = "UILabel"; text = "Procurar lugares"; ObjectID = "S6K-5W-3qb"; */
+"S6K-5W-3qb.text" = "Procurar lugares";
+
+/* Class = "UILabel"; text = "Favorites"; ObjectID = "Spf-8L-Ne6"; */
+"Spf-8L-Ne6.text" = "Favorites";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "T7F-Lv-hDo"; */
+"T7F-Lv-hDo.text" = "5";
+
+/* Class = "UILabel"; text = "Número de lugares"; ObjectID = "Uee-Qg-jxn"; */
+"Uee-Qg-jxn.text" = "Número de lugares";
+
+/* Class = "UILabel"; text = "Usar a minha localização"; ObjectID = "Via-Z6-jxc"; */
+"Via-Z6-jxc.text" = "Usar a minha localização";
+
+/* Class = "UILabel"; text = "Lugares Livres"; ObjectID = "WQo-WV-dRH"; */
+"WQo-WV-dRH.text" = "Lugares Livres";
+
+/* Class = "UILabel"; text = "Estudo individual em silêncio"; ObjectID = "Wtx-mE-6VA"; */
+"Wtx-mE-6VA.text" = "Estudo individual em silêncio";
+
+/* Class = "UILabel"; text = "19"; ObjectID = "aUQ-pK-orT"; */
+"aUQ-pK-orT.text" = "19";
+
+/* Class = "UITableViewController"; title = "Properties Table View Controller"; ObjectID = "bTG-3q-q4g"; */
+"bTG-3q-q4g.title" = "Properties Table View Controller";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "brx-xW-Y2S"; */
+"brx-xW-Y2S.text" = "1";
+
+/* Class = "UILabel"; text = "0%"; ObjectID = "dem-xj-Puc"; */
+"dem-xj-Puc.text" = "0%";
+
+/* Class = "UILabel"; text = "Poucas tomadas elétricas"; ObjectID = "eec-fL-Ghg"; */
+"eec-fL-Ghg.text" = "Poucas tomadas elétricas";
+
+/* Class = "UILabel"; text = "Permitido comer e beber"; ObjectID = "ek2-NE-KFm"; */
+"ek2-NE-KFm.text" = "Permitido comer e beber";
+
+/* Class = "UILabel"; text = "Computadores disponíveis"; ObjectID = "f6R-8n-W6z"; */
+"f6R-8n-W6z.text" = "Computadores disponíveis";
+
+/* Class = "UILabel"; text = "Disponibiliza livros"; ObjectID = "fgQ-k7-6f4"; */
+"fgQ-k7-6f4.text" = "Disponibiliza livros";
+
+/* Class = "UILabel"; text = "0 Places"; ObjectID = "gyo-3V-7U8"; */
+"gyo-3V-7U8.text" = "0 Places";
+
+/* Class = "UILabel"; text = "Ocupação Total"; ObjectID = "iVB-Cs-Pt5"; */
+"iVB-Cs-Pt5.text" = "Ocupação Total";
+
+/* Class = "UILabel"; text = "Zona do campus"; ObjectID = "ioO-qC-cA0"; */
+"ioO-qC-cA0.text" = "Zona do campus";
+
+/* Class = "UILabel"; text = "Consulta de livros"; ObjectID = "kEZ-bm-7RT"; */
+"kEZ-bm-7RT.text" = "Consulta de livros";
+
+/* Class = "UILabel"; text = "22"; ObjectID = "l4Q-xt-889"; */
+"l4Q-xt-889.text" = "22";
+
+/* Class = "UIButton"; normalTitle = "Pesquisar"; ObjectID = "lpZ-L9-RKW"; */
+"lpZ-L9-RKW.normalTitle" = "Pesquisar";
+
+/* Class = "UILabel"; text = "72%"; ObjectID = "mOR-8b-00X"; */
+"mOR-8b-00X.text" = "72%";
+
+/* Class = "UILabel"; text = "Resultados de Pesquisa"; ObjectID = "myF-HD-0JP"; */
+"myF-HD-0JP.text" = "Resultados de Pesquisa";
+
+/* Class = "UILabel"; text = "Mesas Livres"; ObjectID = "n2s-Hu-k56"; */
+"n2s-Hu-k56.text" = "Mesas Livres";
+
+/* Class = "UILabel"; text = "Encontramos 6 salas perto de si"; ObjectID = "nCr-fT-wrX"; */
+"nCr-fT-wrX.text" = "Encontramos 6 salas perto de si";
+
+/* Class = "UILabel"; text = "Horário"; ObjectID = "oGj-TD-zRB"; */
+"oGj-TD-zRB.text" = "Horário";
+
+/* Class = "UILabel"; text = "Segunda-Sexta, 8-20h"; ObjectID = "pKW-87-k0N"; */
+"pKW-87-k0N.text" = "Segunda-Sexta, 8-20h";
+
+/* Class = "UILabel"; text = "Esta Semana"; ObjectID = "q0a-p2-CXw"; */
+"q0a-p2-CXw.text" = "Esta Semana";
+
+/* Class = "UILabel"; text = "Bem equipada com tomadas e extensões"; ObjectID = "rWt-Vr-ILO"; */
+"rWt-Vr-ILO.text" = "Bem equipada com tomadas e extensões";
+
+/* Class = "UILabel"; text = "Escolha uma biblioteca"; ObjectID = "sNr-Qa-aPf"; */
+"sNr-Qa-aPf.text" = "Escolha uma biblioteca";
+
+/* Class = "UILabel"; text = "Acesso a terminais Linux"; ObjectID = "t4b-gI-Gtw"; */
+"t4b-gI-Gtw.text" = "Acesso a terminais Linux";
+
+/* Class = "UILabel"; text = "Estudo individual silencioso"; ObjectID = "tC4-e3-rvk"; */
+"tC4-e3-rvk.text" = "Estudo individual silencioso";
+
+/* Class = "UILabel"; text = "Nome da Sala"; ObjectID = "tf1-AS-MBa"; */
+"tf1-AS-MBa.text" = "Nome da Sala";
+
+/* Class = "UILabel"; text = "Torre Sul, Piso 0"; ObjectID = "uZY-JM-rQK"; */
+"uZY-JM-rQK.text" = "Torre Sul, Piso 0";
+
+/* Class = "UITableViewSection"; footerTitle = "A sua localização será apenas utilizada durante a pesquisa para determinar as salas mais próximas de si."; ObjectID = "uxr-6K-tKK"; */
+"uxr-6K-tKK.footerTitle" = "A sua localização será apenas utilizada durante a pesquisa para determinar as salas mais próximas de si.";
+
+/* Class = "UITableViewSection"; headerTitle = "Pesquisa Avançada"; ObjectID = "uxr-6K-tKK"; */
+"uxr-6K-tKK.headerTitle" = "Pesquisa Avançada";
+
+/* Class = "UILabel"; text = "Acesso a computadores Windows"; ObjectID = "vvS-cA-RNX"; */
+"vvS-cA-RNX.text" = "Acesso a computadores Windows";
+
+/* Class = "UILabel"; text = "Ocupação neste instante até"; ObjectID = "wyx-Km-Tpr"; */
+"wyx-Km-Tpr.text" = "Ocupação neste instante até";
+
+/* Class = "UITableViewSection"; headerTitle = "Pesquisa Básica"; ObjectID = "zjO-MQ-ApB"; */
+"zjO-MQ-ApB.headerTitle" = "Pesquisa Básica";

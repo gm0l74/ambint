@@ -1,0 +1,42 @@
+{
+  "name": "glcwebapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "next start",
+    "serve": "next start -p $PORT",
+    "build": "next build",
+    "dev": "next dev",
+    "test": "jest"
+  },
+  "dependencies": {
+    "firebase-admin": "^9.4.0",
+    "@firebase/app": "^0.6.19",
+    "@firebase/auth": "^0.16.4",
+    "@firebase/firestore": "^2.2.3",
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "@popperjs/core": "2.9.1",
+    "@svgr/webpack": "^5.4.0",
+    "@tailwindcss/forms": "0.2.1",
+    "next": "^10.2.0",
+    "nookies": "^2.5.0",
+    "next-auth": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tailwindcss": "2.0.4",
+    "react-qr-code": "^1.1.1",
+    "postcss": "^8.2.15"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "next-secure-headers": "^2.2.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.5",
+    "postcss-preset-env": "^6.7.0",
+    "jest": "^26.6.3",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/dom": "^7.30.3",
+    "@testing-library/jest-dom": "^5.11.10",
+    "babel-jest": "^26.6.3"
+  }
+}

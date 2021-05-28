@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Building" representedClassName="Building" isAbstract="YES" syncable="YES">
+        <attribute name="location" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="occupation" optional="YES" attributeType="Decimal" minValueString="0" maxValueString="1" defaultValueString="0.0"/>
+        <relationship name="room" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="building" inverseEntity="Room"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" isAbstract="YES" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="occupation" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="room" inverseEntity="Building"/>
+    </entity>
+    <elements>
+        <element name="Building" positionX="-18" positionY="27" width="128" height="89"/>
+        <element name="Room" positionX="36" positionY="108" width="128" height="74"/>
+    </elements>
+</model>

@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          20 05 2021
-// @ last update         20 05 2021
+// @ last update         03 06 2021
 //---------------------------------
 
 //---------------------------------
@@ -32,7 +32,8 @@ import Button from 'components/Button';
 let SETTINGS_PARAMETERS = {
   displayName: '',
   state: false,
-  computer: ['mac', 'win', 'linux', 'none']
+  computer: ['mac', 'win', 'linux', 'none'],
+  floor: []
 };
 
 //---------------------------------
@@ -75,7 +76,8 @@ const Seats = ({ rooms, seats, oid }) => {
             values={{
               ...SETTINGS_PARAMETERS,
               room: rooms,
-              building: building_uids
+              building: building_uids,
+              floor: rooms.floors || []
             }}
             invisible='building'
             addon={{ user: oid, type: 'seat' }}

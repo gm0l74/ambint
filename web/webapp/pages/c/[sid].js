@@ -23,7 +23,7 @@ import QrCode from 'components/QrCode';
 // Page Confirmation
 //---------------------------------
 const Confirmation = ({ sid, state }) => {
-  const color = (state) ? 'red' : 'green';
+  const color = (!state) ? 'red' : 'green';
 
   return (
     <>

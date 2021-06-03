@@ -33,8 +33,7 @@ let SETTINGS_PARAMETERS = {
   shortDisplayName: '',
   silence: false,
   eat: true,
-  groupwork: true,
-  floor: []
+  groupwork: true
 };
 
 //---------------------------------
@@ -70,8 +69,7 @@ const Rooms = ({ server, rooms, oid, buildings }) => {
             collection='rooms'
             values={{
               ...SETTINGS_PARAMETERS,
-              building: buildings,
-              floor: buildings.floors || []
+              building: buildings
             }}
             addon={{ user: oid, type: 'room' }}
             title='ADD'

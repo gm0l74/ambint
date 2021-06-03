@@ -5,7 +5,7 @@
 // @ version             1.0
 //
 // @ start date          20 05 2021
-// @ last update         28 05 2021
+// @ last update         03 06 2021
 //---------------------------------
 
 //---------------------------------
@@ -58,11 +58,11 @@ const Settings = ({
 
   // Event handlers
   const handleChange = async (name, value) => {
-    if (collection === 'rooms' && method === 'CREATE' && name.toLowerCase() === 'building') {
+    if (collection === 'seats' && method === 'CREATE' && name.toLowerCase() === 'room') {
       try {
-        const data = await fetch(`${server}/api?type=buildings&uid=${value}`);
-        const b = await data.json();
-        setFloors(b.floors || []);
+        const data = await fetch(`${server}/api?type=rooms&uid=${value}`);
+        const s = await data.json();
+        setFloors(s.floors || []);
       } catch (e) {
         console.log(e);
       }
@@ -115,7 +115,7 @@ const Settings = ({
               ...addon,
               ...form,
               ...bid,
-              ...{ displayName: `${currentDate.getSeconds()}_${i}` }
+              ...{ displayName: `${currentDate.toISOString()}_${i}` }
             });
           }
         } else {

@@ -30,7 +30,7 @@ import Button from 'components/Button';
 const Seat = ({ seat, oid }) => {
   const router = useRouter();
 
-  const color = (seat.state) ? 'red' : 'green';
+  const color = (!seat.state) ? 'red' : 'green';
 
   return (
     <>
